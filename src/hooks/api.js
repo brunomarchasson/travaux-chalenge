@@ -19,7 +19,7 @@ export const apiFetch = async (endpoint, options) => {
 const reducer = (state, action) => {
   switch (action.type) {
     case "START_FETCHING":
-      return { ...state, loading: true, errors: null };
+      return { ...state, data: null, loading: true, errors: null };
     case "ERRORS":
       return { ...state, errors: action.errors, loading: false };
     case "DATA":
