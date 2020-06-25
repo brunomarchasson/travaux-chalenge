@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../assets/y18.gif";
+import './Header.css'
+
 const NAV_ITEMS = {
   new: "newest",
   past: "front",

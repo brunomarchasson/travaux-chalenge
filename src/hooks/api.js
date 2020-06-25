@@ -11,7 +11,6 @@ export const apiFetch = async (endpoint, options) => {
   if (response.ok) {
     return responseData;
   } else {
-      console.log(responseData)
     throw responseData;
   }
 };
@@ -44,7 +43,6 @@ export const useApi = () => {
         return data;
       }
     } catch (e) {
-        console.log(e)
       dispatch({
         type: "ERRORS",
         errors: e.error,

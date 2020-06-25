@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useApi } from "../hooks/api";
 import moment from "moment";
+import { Link } from "react-router-dom";
 import "./News.css";
 
 export const News = ({ id, index }) => {
@@ -33,7 +34,9 @@ export const News = ({ id, index }) => {
           )}
         </div>
         <div className="Detail">
-          {data.score} points by {data.by} {moment.unix(data.time).fromNow()}{" "}
+          {data.score} points by{" "}
+          <Link to={`/user?id=${data.by}`}>{data.by}</Link>
+          {moment.unix(data.time).fromNow()}{" "}
           {!!data.descendants && `${data.descendants} comments`}
         </div>
       </div>
