@@ -3,7 +3,7 @@ import { useApi } from "../hooks/api";
 import News from "./News";
 import Header from "./Header";
 
-export const NewsList = (props) => {
+export const NewsList = ({type}) => {
   const { loading, errors, data, doFetch } = useApi();
 
   useEffect(() => {

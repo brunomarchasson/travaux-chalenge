@@ -18,7 +18,7 @@ export const Header = () => (
     </b>
     <div className="Nav">
       {Object.entries(NAV_ITEMS).map(([label, url]) => (
-        <span>
+        <span key={label}>
           <a href={url}>{label}</a>
         </span>
       ))}
